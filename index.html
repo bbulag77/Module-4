@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freddie Paclijan</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>  -->
+  <script 
+    src="https://kit.fontawesome.com/244a2cd759.js" crossorigin="anonymous">
+  </script>
+  <script src="index.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "iMrbgJxFlVYudzQyw",
+      });
+   })();
+</script>
+</head>index
+<body>
+    <section id="landing-page">
+        <nav>
+            <figure>
+                <img id="personal-logo"src="./assets/deltalogo.ico" alt="" />
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav-link">
+                    <a href="#" class ="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black"
+                    >About Me</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black"
+                    >Projects</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black"
+                    >Contact</a>
+                <li class="nav-link click">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black"
+                    ><i class="fa-solid fa-bolt"></i></a>
+            </ul>
+        </nav>
+         <header class="header">
+             <div class="header__content">
+                <h1 class="title">Hi!</h1>
+                <h1 class="title orange">I'm Freddie</h1>
+                 <p class="header__para">
+                    I am a <b class="orange">software developer</b> specializing in building (and occasionally designing) exceptional digital experiences. Currently, I am focused on building responsive full-stack web applications.
+                    <br>
+                    here's a bit more <b class="orange">about me</b>.
+                 </p>
+                 <br>
+                 <div class="social__list">
+                    <a href="https://www.facebook.com/" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="./assets/Alfredo.Paclijan Resume.pdf" target="_blank" class="social__link click">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                 </div>
+             </div>
+         </header>
+         <button class="mail__btn click">
+            <i class="fa-solid fa-envelope"></i>
+         </button>
+         <a href="#projects" class="scroll">
+            <div class="scroll_icon click"></div>
+         </a>
+         <div class="modal">
+
+            <div class="modal__half modal__about" >
+                <h3 class="modal__title modal__title--about ">
+                    Here's a bit about me:
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--about">
+                    Experienced IT professional
+                </h4>
+                <p class="modal__para">
+                    With over <b class="orange">20 year experience</b> performing various 
+                    IT positions, from <b class="orange">programming, implementation 
+                    to applications support</b> , for international and 
+                    local companies in the Philippines. 
+                    <br> 
+                    Knowledgeable in <b class="orange"> bottling and traditional selling 
+                    operations</b> as well as <b class="orange">organized pawnshop operations</b>.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                <img class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt="">
+                <span class="language__name">HTML</span>
+                </figure>
+                <figure class="modal__language">
+                    <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                        alt="">
+                    <span class="language__name">CSS</span>
+                </figure>
+                <figure class="modal__language">
+                    <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                    alt="">
+                <span class="language__name">JavaScript</span>
+                </figure>
+                <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/cobolA.png"
+                    alt="">
+                    <span class="language__name"><br> <br> COBOL</span>
+                </figure>
+                </div>
+            </div>
+            
+
+            <div class="modal__half modal__contact">
+                 <h3 class="modal__title, modal__title--contact">
+                    Let's have a Chat!
+                 </h3>
+                 <h3 class="modal__sub-title, modal__sub-title--contact">
+                    I'm currectly open to new opportunities.
+                 </h3>
+                <form onsubmit="contact(event)" id="contact__form">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input type="text"  class="input" name="name" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input type="email"  class="input" name="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea name="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way!
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                  Thank you for the message. Looking forward to speaking to you soon!
+                </div>
+                    <i class="fas fa-times modal__exit click"></i>    
+            </div>
+         </div>
+        
+    </section>
+    <section class="projects">
+        <div class="container">
+        <div class="row">
+            <hi class="section__title">
+                Here are some of my <span class="orange">projects</span>
+            </hi>
+            <ul class="project__list">
+                <li class="project">
+                    <div class="project__wrapper">
+                        <img src="./assets/chat.png  " class="project__img"></img>
+                        <div class="project__wrapper--bg"></div>
+                        <div class="project__description">
+                            <h3 class="project__description--title">
+                                Car Sales Project
+                            </h3>
+                            <h4 class="project__description--sub-title">
+                                HTML, CSS, Javascript, COBOL
+                            </h4>
+                            <p class="project__description--para">
+                                Lorem ipsum dolor sit amet consectetur, 
+                                adipisicing elit. Deserunt nisi reprehenderit
+                                quas minima, nostrum officiis! Eligendi 
+                                aspernatur natus asperiores. Deserunt tempore 
+                                cupiditate veniam iste quo dolorem aliquam quas alias quae.
+                            </p>
+                            <a href="#" class="projection__description--link">
+                                <i class="fa-solid fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="project">
+                    <div class="project__wrapper">
+                        <img src="./assets/blinker mockup.png  " class="project__img"></img>
+                        <div class="project__wrapper--bg"></div>
+                        <div class="project__description">
+                            <h3 class="project__description--title">
+                                Car Sales Project
+                            </h3>
+                            <h4 class="project__description--sub-title">
+                                HTML, CSS, Javascript, COBOL
+                            </h4>
+                            <p class="project__description--para">
+                                Lorem ipsum dolor sit amet consectetur, 
+                                adipisicing elit. Deserunt nisi reprehenderit
+                                quas minima, nostrum officiis! Eligendi 
+                                aspernatur natus asperiores. Deserunt tempore 
+                                cupiditate veniam iste quo dolorem aliquam quas alias quae.
+                            </p>
+                            <a href="#" class="projection__description--link">
+                                <i class="fa-solid fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+          <div class="row footer__row">
+           <figure>
+            <img class="footer__logo--img" src="./assets/deltalogo.ico" alt="">
+           </figure>
+           <div class="footer__social--list">
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            Github</a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            linkedin</a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            Resume</a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white">
+            Contact</a>
+           </div>
+           <div class="footer__copyright">
+            Copyright © 2026 Alfredo S. Paclijan
+           </div> 
+          </div> 
+        </div>
+    </footer>
+</body>
+</html>
