@@ -20,15 +20,15 @@
       });
    })();
 </script>
-</head>index
+</head>
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="personal-logo"src="./assets/deltalogo.ico" alt="" />
             </figure>
             <ul class="nav__link--list">
-                <li class="nav-link">
+                <li class="nav-link" onclick="toggle__modal()">
                     <a href="#" class ="
                     nav__link--anchor
                     link__hover-effect
@@ -36,19 +36,19 @@
                     >About Me</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black"
                     >Projects</a>
                 </li>
-                <li class="nav-link">
+                <li class="nav-link" onclick="toggle__modal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black"
                     >Contact</a>
-                <li class="nav-link click">
+                <li class="nav-link click" onclick="toggleContrast()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -63,7 +63,7 @@
                  <p class="header__para">
                     I am a <b class="orange">software developer</b> specializing in building (and occasionally designing) exceptional digital experiences. Currently, I am focused on building responsive full-stack web applications.
                     <br>
-                    here's a bit more <b class="orange">about me</b>.
+                    here's a bit more <b class="orange click" onclick="toggle__modal()">about me</b>.
                  </p>
                  <br>
                  <div class="social__list">
@@ -79,9 +79,11 @@
                  </div>
              </div>
          </header>
-         <button class="mail__btn click">
+         <a href="#">
+         <button class="mail__btn click" onclick="toggle__modal()">
             <i class="fa-solid fa-envelope"></i>
          </button>
+         </a>
          <a href="#projects" class="scroll">
             <div class="scroll_icon click"></div>
          </a>
@@ -130,9 +132,10 @@
             
 
             <div class="modal__half modal__contact">
-                 <h3 class="modal__title, modal__title--contact">
+                 <i class="fas fa-times modal__exit click" onclick="toggle__modal()"></i> 
+                 <h2 class="modal__title, modal__title--contact">
                     Let's have a Chat!
-                 </h3>
+                 </h2>
                  <h3 class="modal__sub-title, modal__sub-title--contact">
                     I'm currectly open to new opportunities.
                  </h3>
@@ -147,7 +150,7 @@
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea name="input" name="message" type="text" required></textarea>
+                        <textarea class="input" name="message" type="text" required></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">
                         Send it my way!
@@ -159,10 +162,18 @@
                 <div class="modal__overlay modal__overlay--success">
                   Thank you for the message. Looking forward to speaking to you soon!
                 </div>
-                    <i class="fas fa-times modal__exit click"></i>    
+                      
             </div>
          </div>
-        
+        <img src="./assets/semi-circle.svg" class="shape shape--0"></img>
+        <img src="./assets/circle.svg" class="shape shape--1"></img>
+        <img src="./assets/squiggly.svg" class="shape shape--2"></img>
+        <img src="./assets/circle.svg" class="shape shape--3"></img>
+        <img src="./assets/triangle.svg" class="shape shape--4"></img>
+        <img src="./assets/circle.svg" class="shape shape--5"></img>
+        <img src="./assets/squiggly.svg" class="shape shape--6"></img>
+        <img src="./assets/circle.svg" class="shape shape--7"></img>
+        <img src="./assets/semi-circle.svg" class="shape shape--8"></img>
     </section>
     <section class="projects">
         <div class="container">
@@ -235,17 +246,17 @@
             link__hover-effect
             link__hover-effect--white">
             Github</a>
-            <a href="#" class="
+            <a href="https://www.linkedin.com/"  target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white">
             linkedin</a>
-            <a href="#" class="
+            <a href="./assets/Alfredo.Paclijan Resume.pdf" target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white">
             Resume</a>
-            <a href="#" class="
+            <a href="#" onclick="openModal()" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white">
